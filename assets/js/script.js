@@ -29,13 +29,13 @@ function displayHours() {
         textarea.addClass("form-control"); 
 
         if (currentHr > businessHrs[i]) {
-            textarea.addClass("bg-secondary");    
+            textarea.addClass("past");    
         }
         if (currentHr == businessHrs[i]) {
-            textarea.addClass("bg-danger");
+            textarea.addClass("present");
         }
         if (currentHr < businessHrs[i]) {
-            textarea.addClass("bg-success");
+            textarea.addClass("future");
         }
 
         let textareaValue = localStorage.getItem("textarea" + i)
